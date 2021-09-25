@@ -16,6 +16,10 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
+app.get('/', (req, res) => {
+  res.send("hello api")
+})
+
 const CONNECTION_URL = 'mongodb+srv://'+process.env.AUTH+'@cluster0.166oo.mongodb.net/mern';
 const PORT = process.env.PORT|| 5000;
 
